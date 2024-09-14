@@ -37,7 +37,9 @@ export default function LandingPage() {
         </div>
       )}
       <div className='ig-div'>
-        <img src={Insta} alt="instagram link" />
+        <a href="https://www.instagram.com/xajjira/" target="_blank" rel="noopener noreferrer">
+          <img src={Insta} alt="instagram link" />
+        </a>
       </div>
     </div>
   );

@@ -3,8 +3,6 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 import './CustomForm.css';
 import Subscribe from './assets/RA Website/Asset 11@2x.png';
 import Subscribed from './assets/RA Website/Asset 10@2x.png';
-import Name from './assets/RA Website/Asset 14@2x.png';
-import Email from './assets/RA Website/Asset 13@2x.png';
 
 const CustomForm = ({ setFormVisible }) => {
   const [email, setEmail] = useState("");
@@ -48,10 +46,12 @@ const CustomForm = ({ setFormVisible }) => {
     }
   };
 
-  const handleNameKeyDown2 = (e) => {
+  const handleEmailKeyDown = (e, subscribe) => {
     if (e.key === 'Enter') {
+      // e.preventDefault(); 
       if (email.trim() !== "") {
         setFormSubmitted(true);
+        handleSubmit(e, subscribe); 
       }
     }
   };
@@ -68,34 +68,31 @@ const CustomForm = ({ setFormVisible }) => {
             </div>
           ) : (
             <form className="subscribeForm" onSubmit={(e) => handleSubmit(e, subscribe)}>
-              <div>
-                <img src={Subscribe} alt="Subscribe Text" />
-                <label htmlFor="name">
-                  <img src={Name} alt="Name" />
-                </label>
+              <div className="form-box">
+                <img className="subscribe-text"src={Subscribe} alt="Subscribe Text" />
                 <input
                   type="text"
                   id="name"
                   value={name}
+                  placeholder="name"
                   onChange={(e) => setName(e.target.value)}
                   onKeyDown={handleNameKeyDown1} 
                   ref={nameInputRef} 
-                  autoFocus
+                  // autoFocus
                 />
               </div>
               {emailInputVisible && (
                 <div>
-                  <label htmlFor="email">
-                    <img src={Email} alt="email text" />
-                  </label>
                   <input
                     type="email"
                     id="email"
                     value={email}
+                    placeholder="email"
                     onChange={(e) => setEmail(e.target.value)}
-                    onKeyDown={handleNameKeyDown2}
+                    onKeyDown={(e) => handleEmailKeyDown(e, subscribe)}
                     required
                     ref={emailInputRef} 
+                    // autoFocus
                   />
                 </div>
               )}

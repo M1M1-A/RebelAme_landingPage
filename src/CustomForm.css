@@ -1,9 +1,9 @@
 .form-container {
-  display: flex;
+  /* display: flex;
   justify-content: center; 
-  align-items: center;   
-  height: 100vh;           
-  width: 100vw;           
+  align-items: center;    */
+  /* height: 100vh;           
+  width: 100vw;            */
 }
 
 .subscribeForm {
@@ -18,6 +18,9 @@
   box-sizing: border-box; 
 }
 
+.form-box {
+  margin-top: 96%;
+}
 .subscribeForm div {
   width: 100%; 
   margin-bottom: 1rem; 
@@ -34,14 +37,20 @@
 
 .subscribeForm input {
   width: 60%; 
-  padding: 0.75rem;
   font-size: 1rem;
   background: transparent; 
   border: none; 
   outline: none; 
-  color: white; 
   box-sizing: border-box; 
+  /* margin-left: 45%; */
+  text-align: center;
+  padding: 10px;
+  color: #fbfcf4;
 }
+
+/* .subscribeForm input::placeholder {
+  margin-right: -40px;
+} */
 
 .subscribeForm button {
   padding: 0.75rem 1rem;
