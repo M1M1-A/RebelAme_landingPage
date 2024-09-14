@@ -36,11 +36,10 @@
   width: 60%; 
   padding: 0.75rem;
   font-size: 1rem;
-  background: transparent; /* Remove background */
-  border: none; /* Remove border */
-  border-bottom: 1px solid #ccc; /* Only bottom border */
+  background: transparent; 
+  border: none; 
   outline: none; 
-  color: white; /* Text color to contrast with background */
+  color: white; 
   box-sizing: border-box; 
 }
 
@@ -57,10 +56,6 @@
   border-radius: 4px;
   box-sizing: border-box; 
 }
-
-/* .subscribeForm button:hover {
-  background-color: #333; 
-} */
 
 .successMessage {
   color: white;
