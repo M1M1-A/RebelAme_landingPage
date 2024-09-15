@@ -22,15 +22,17 @@ export default function LandingPage() {
         >
           {isHovered ? (
             <div>
-              <img 
+              <p onClick={() => setFormVisible(true)}>Subscribe</p>
+              {/* <img 
                 src={Subscribe} 
                 alt='Subscribe Text'
                 onClick={() => setFormVisible(true)}  
-              />
+              /> */}
             </div>
           ) : (
             <div>
-              <img src={RebelAme} alt='Rebel Ame Text'/>
+              <p>Rebel Ame</p>
+              {/* <img src={RebelAme} alt='Rebel Ame Text'/> */}
             </div>
           )}
           </div>

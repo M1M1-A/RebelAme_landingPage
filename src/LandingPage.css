@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'NueuHaas';
+  src: url('./assets/NeueHaasDisplay-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .mainContainer {
   display: flex;
   justify-content: center;
@@ -5,10 +12,14 @@
   height: 100vh;
 }
 
-.text {
-  color: white;
-  font-size: 4rem;
+p {
+  color: #fff7ea;
+  opacity: 95%;
+  font-size: 3rem;
+  font-family: 'NueuHaas';
+  filter: blur(1.1px); 
 }
+
 
 body {
   background-color: #0b0c0c;

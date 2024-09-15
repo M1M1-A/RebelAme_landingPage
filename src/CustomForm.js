@@ -63,13 +63,15 @@ const CustomForm = ({ setFormVisible }) => {
         <div className="form-container">
           {formSubmitted || status === "success" ? (
             <div className="successMessage">
-              <img src={Subscribed} alt="Subscribed" />
+              <p className="subscribed-text">Subscribed</p>
+              {/* <img src={Subscribed} alt="Subscribed" /> */}
               {status === "success" && !formSubmitted && setFormSubmitted(true)}
             </div>
           ) : (
             <form className="subscribeForm" onSubmit={(e) => handleSubmit(e, subscribe)}>
               <div className="form-box">
-                <img className="subscribe-text"src={Subscribe} alt="Subscribe Text" />
+                <p>Subscribe</p>
+                {/* <img className="subscribe-text"src={Subscribe} alt="Subscribe Text" /> */}
                 <input
                   type="text"
                   id="name"

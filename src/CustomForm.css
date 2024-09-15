@@ -1,10 +1,10 @@
-.form-container {
-  /* display: flex;
+/* .form-container {
+  display: flex;
   justify-content: center; 
-  align-items: center;    */
-  /* height: 100vh;           
-  width: 100vw;            */
-}
+  align-items: center;   
+  height: 100vh;           
+  width: 100vw;           
+} */
 
 .subscribeForm {
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .form-box {
-  margin-top: 96%;
+  margin-top: 83.5%;
 }
 .subscribeForm div {
   width: 100%; 
@@ -69,5 +69,13 @@
 .successMessage {
   color: white;
   text-align: center; 
+  margin-top: 25%;
 }
 
+.subscribed-text {
+  color: #d56d69;
+  opacity: 95%;
+  font-size: 3rem;
+  font-family: 'NueuHaas';
+  filter: blur(1.1px); 
+}
