@@ -12,19 +12,20 @@
   align-items: center; 
   justify-content: center; 
   margin: 0 auto; 
-  max-width: 400px; 
-  padding: 2rem;
+  /* max-width: 500px;  */
+  width: 60vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   box-sizing: border-box; 
 }
 
-.form-box {
-  margin-top: 83.5%;
-}
+
 .subscribeForm div {
   width: 100%; 
-  margin-bottom: 1rem; 
   box-sizing: border-box; 
+}
+
+.subscribeForm p {
+  margin: 0
 }
 
 .subscribeForm label {
@@ -42,15 +43,10 @@
   border: none; 
   outline: none; 
   box-sizing: border-box; 
-  /* margin-left: 45%; */
   text-align: center;
   padding: 10px;
   color: #fbfcf4;
 }
-
-/* .subscribeForm input::placeholder {
-  margin-right: -40px;
-} */
 
 .subscribeForm button {
   padding: 0.75rem 1rem;
@@ -66,16 +62,6 @@
   box-sizing: border-box; 
 }
 
-.successMessage {
-  color: white;
-  text-align: center; 
-  margin-top: 25%;
-}
-
-.subscribed-text {
-  color: #d56d69;
-  opacity: 95%;
-  font-size: 3rem;
-  font-family: 'NueuHaas';
-  filter: blur(1.1px); 
+p {
+  margin: 0;
 }
