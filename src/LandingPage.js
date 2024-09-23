@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import './LandingPage.css';
 import CustomForm from './CustomForm.js';
-// import Insta from './assets/RA Website/Asset 15@2x.png'
 
 export default function LandingPage() {
   const [isHovered, setIsHovered] = useState(false);
-  const [formVisible, setFormVisible] = useState(false)
+  const [formVisible, setFormVisible] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const instaLink = "https://www.instagram.com/xajjira/"
-  const kickstarterLink = "https://www.kickstarter.com/projects/xajji/a-film-about-a-tattoo-a-bike-a-dry-cleaners-and-a-time?ref=9cld3j"
-  
+  const instaLink = "https://www.instagram.com/xajjira/";
+  const kickstarterLink = "https://www.kickstarter.com/projects/xajji/a-film-about-a-tattoo-a-bike-a-dry-cleaners-and-a-time?ref=9cld3j";
+
   const handleFormSubmit = () => {
     setFormSubmitted(true);
   };
+
+  // Function to handle both mouse and touch hover
+  const handleHoverStart = () => setIsHovered(true);
+  const handleHoverEnd = () => setIsHovered(false);
 
   return (
     <div>
@@ -28,12 +31,14 @@ export default function LandingPage() {
           ) : (
             <div 
               className='centerBox'
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+              onMouseEnter={handleHoverStart}
+              onMouseLeave={handleHoverEnd}
+              onTouchStart={handleHoverStart}   
+              onTouchEnd={handleHoverEnd}       
             >
               <div 
                 className={`fadeText1-container ${isHovered ? 'active' : ''}`} 
-                onClick={() => {setFormVisible(true); console.log("clicked")}}
+                onClick={() => setFormVisible(true)}
               >
                 <p className={`fadeText1 ${isHovered ? 'active' : ''}`}>Subscribe</p>
               </div>
@@ -41,7 +46,7 @@ export default function LandingPage() {
             </div>
           )}
         <div className='form-div'>
-          {formVisible && ( <CustomForm setFormVisible={setFormVisible} onFormSubmit={handleFormSubmit}/>)}
+          {formVisible && (<CustomForm setFormVisible={setFormVisible} onFormSubmit={handleFormSubmit} />)}
         </div>
       </div>
       <div className='ig-div'>
@@ -55,4 +60,4 @@ export default function LandingPage() {
       </div>
     </div>
   );
-}  
+}
