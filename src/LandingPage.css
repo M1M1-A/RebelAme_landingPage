@@ -68,7 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none; 
+  /* pointer-events: none;  */
 }
 
 .fadeText1-container.active {
@@ -87,6 +87,10 @@ body {
 
 .fadeText2.active {
   opacity: 1;
+}
+
+.fadeText2 {
+  pointer-events: none; 
 }
 
 .centerBox {

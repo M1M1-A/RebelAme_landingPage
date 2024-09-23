@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LandingPage.css';
 import CustomForm from './CustomForm.js';
-import Insta from './assets/RA Website/Asset 15@2x.png'
+// import Insta from './assets/RA Website/Asset 15@2x.png'
 
 export default function LandingPage() {
   const [isHovered, setIsHovered] = useState(false);
@@ -33,7 +33,7 @@ export default function LandingPage() {
             >
               <div 
                 className={`fadeText1-container ${isHovered ? 'active' : ''}`} 
-                onClick={() => setFormVisible(true)}
+                onClick={() => {setFormVisible(true); console.log("clicked")}}
               >
                 <p className={`fadeText1 ${isHovered ? 'active' : ''}`}>Subscribe</p>
               </div>
