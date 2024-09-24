@@ -14,7 +14,6 @@ export default function LandingPage() {
     setFormSubmitted(true);
   };
 
-  // Function to handle both mouse and touch hover
   const handleHoverStart = () => setIsHovered(true);
   const handleHoverEnd = () => setIsHovered(false);
 

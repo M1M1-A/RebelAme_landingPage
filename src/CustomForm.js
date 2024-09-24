@@ -14,7 +14,7 @@ const CustomForm = ({ setFormVisible, onFormSubmit }) => {
 
   const handleSubmit = (e, subscribe) => {
     e.preventDefault();
-    // Basic email validation
+    // Basic email validation 
     if (email && email.indexOf("@") > -1) {
       subscribe({
         EMAIL: email,
