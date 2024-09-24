@@ -7,6 +7,7 @@
 
 .mainContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -28,9 +29,73 @@ body {
 }
 
 .ig-div {
+  display: flex;
+  flex-direction: row;
   position: fixed;
   bottom: 1px;
   right: 1px;
   z-index: 1000;
+  margin: 10px;
 }
 
+.link-div-text {
+  font-size: 1.2rem;
+  margin: 3px;
+}
+
+.empty-div1 {
+  flex: 2;
+}
+
+.form-div {
+  flex: 2;
+  align-items: flex-start;
+}
+
+.subscribed-text {
+  color: #d56d69;
+  opacity: 95%;
+  font-size: 3rem;
+  font-family: 'NueuHaas';
+  filter: blur(1.1px); 
+}
+
+.fadeText1-container {
+  position: relative;
+  cursor: pointer;
+  height: 100px; 
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fadeText1-container.active {
+  pointer-events: auto; 
+}
+
+.fadeText1, .fadeText2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+}
+
+.fadeText1.active {
+  opacity: 1;
+}
+
+.fadeText2.active {
+  opacity: 1;
+}
+
+.fadeText2 {
+  pointer-events: none; 
+}
+
+.centerBox {
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
