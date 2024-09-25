@@ -98,7 +98,7 @@ const CustomForm = ({ setFormVisible, onFormSubmit, handleHoverEnd }) => {
                     ref={emailInputRef} 
                     autoFocus
                   />
-                </div>
+                </div>                
             </form>
         </div>
       )}

@@ -55,8 +55,8 @@
 }
 
 .subscribeForm input {
-  width: 60%; 
-  font-size: 1rem;
+  width: 80%; 
+  font-size: 1.4rem;
   background: transparent; 
   border: none; 
   outline: none; 
@@ -64,9 +64,21 @@
   text-align: center;
   padding: 10px;
   color: #fbfcf4;
+  opacity: 95%;
+  font-family: 'NueuHaas';
+  filter: blur(0.8px); 
 }
 
-.subscribeForm button {
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+
+/* .subscribeForm button {
   padding: 0.75rem 1rem;
   background-color: #0b0c0c;
   border: none;
@@ -78,7 +90,7 @@
   margin-top: 1rem;
   border-radius: 4px;
   box-sizing: border-box; 
-}
+} */
 
 p {
   margin: 0;
