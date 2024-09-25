@@ -10,9 +10,9 @@ export default function LandingPage() {
   const instaLink = "https://www.instagram.com/xajjira/";
   const kickstarterLink = "https://www.kickstarter.com/projects/xajji/a-film-about-a-tattoo-a-bike-a-dry-cleaners-and-a-time?ref=9cld3j";
 
-  const handleFormSubmit = () => {
-    setFormSubmitted(true);
-  };
+  const handleFormSubmit = (trueOrFalse) => {
+    setFormSubmitted(trueOrFalse);
+  };  
 
   const handleHoverStart = () => setIsHovered(true);
   const handleHoverEnd = () => setIsHovered(false);
@@ -45,7 +45,7 @@ export default function LandingPage() {
             </div>
           )}
         <div className='form-div'>
-          {formVisible && (<CustomForm setFormVisible={setFormVisible} onFormSubmit={handleFormSubmit} />)}
+          {formVisible && (<CustomForm setFormVisible={setFormVisible} onFormSubmit={handleFormSubmit} handleHoverEnd={handleHoverEnd} />)}
         </div>
       </div>
       <div className='ig-div'>
