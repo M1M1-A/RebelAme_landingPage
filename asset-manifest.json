@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/RebelAme_landingPage/static/css/main.96ef91c8.css",
+    "main.js": "/RebelAme_landingPage/static/js/main.eba0c8c5.js",
+    "static/js/453.17a2d226.chunk.js": "/RebelAme_landingPage/static/js/453.17a2d226.chunk.js",
+    "static/media/NeueHaasDisplay-Bold.ttf": "/RebelAme_landingPage/static/media/NeueHaasDisplay-Bold.009453efa9d0d7d0b511.ttf",
+    "index.html": "/RebelAme_landingPage/index.html",
+    "main.96ef91c8.css.map": "/RebelAme_landingPage/static/css/main.96ef91c8.css.map",
+    "main.eba0c8c5.js.map": "/RebelAme_landingPage/static/js/main.eba0c8c5.js.map",
+    "453.17a2d226.chunk.js.map": "/RebelAme_landingPage/static/js/453.17a2d226.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96ef91c8.css",
+    "static/js/main.eba0c8c5.js"
+  ]
+}
