@@ -16,7 +16,7 @@
 p {
   color: #fff7ea;
   opacity: 95%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'NueuHaas';
   filter: blur(1.1px); 
 }
@@ -36,11 +36,18 @@ body {
   right: 1px;
   z-index: 1000;
   margin: 10px;
+  opacity: 50%;
 }
 
 .link-div-text {
   font-size: 1.2rem;
   margin: 3px;
+  transition: color 0.3s ease-in-out;
+}
+
+.ig-div a:hover .link-div-text {
+  color: #20718B; /* Change to your desired hover color */
+  opacity: 1;
 }
 
 .empty-div1 {
@@ -76,7 +83,7 @@ body {
 
 .fadeText1, .fadeText2 {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.04s ease-in-out;
   position: absolute;
 }
 

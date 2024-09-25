@@ -79,7 +79,9 @@ const CustomForm = ({ setFormVisible, onFormSubmit, handleHoverEnd }) => {
                   type="text"
                   id="name"
                   value={name}
+                  className={`${formSubmitted ? "submitted" : ""}`} 
                   placeholder="name"
+                  autoComplete="off"
                   onChange={(e) => setName(e.target.value)}
                   onKeyDown={handleNameKeyDown1} 
                   ref={nameInputRef} 
@@ -91,14 +93,16 @@ const CustomForm = ({ setFormVisible, onFormSubmit, handleHoverEnd }) => {
                     type="email"
                     id="email"
                     value={email}
+                    className={`${formSubmitted ? "submitted" : ""}`} 
                     placeholder="email"
+                    autoComplete="off"
                     onChange={(e) => setEmail(e.target.value)}
                     onKeyDown={(e) => handleEmailKeyDown(e, subscribe)}
                     required
                     ref={emailInputRef} 
                     autoFocus
                   />
-                </div>                
+                </div>  
             </form>
         </div>
       )}
