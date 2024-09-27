@@ -2,11 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import './CustomForm.css';
 
-const CustomForm = ({ setFormVisible, onFormSubmit }) => {
+const CustomForm = ({ setFormVisible, onFormSubmit, handleHoverEnd }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [emailInputVisible, setEmailInputVisible] = useState(false);
+  const [fadeInName, setFadeInName] = useState(false);
+  const [fadeInEmail, setFadeInEmail] = useState(false);
   const nameInputRef = useRef(null); 
   const emailInputRef = useRef(null); 
 
@@ -25,20 +26,29 @@ const CustomForm = ({ setFormVisible, onFormSubmit }) => {
 
   useEffect(() => {
     if (formSubmitted) {
-      onFormSubmit(); 
+      onFormSubmit(true); 
 
       const timer = setTimeout(() => {
         setFormVisible(false);
+        onFormSubmit(false)
       }, 5000);
 
       return () => clearTimeout(timer);
+
+    } else {
+      const timer1 = setTimeout(() => {
+        setFadeInName(true)
+      }, 100)
+  
+      return () => clearTimeout(timer1)
     }
+
   }, [formSubmitted, setFormVisible, onFormSubmit]);
 
   const handleNameKeyDown1 = (e) => {
     if (e.key === 'Enter') {
       if (name.trim() !== "") {
-        setEmailInputVisible(true);
+        setFadeInEmail(true)
         if (emailInputRef.current) {
           emailInputRef.current.focus();
         }
@@ -51,7 +61,9 @@ const CustomForm = ({ setFormVisible, onFormSubmit }) => {
       // e.preventDefault(); 
       if (email.trim() !== "") {
         setFormSubmitted(true);
+        setFadeInName(false)
         handleSubmit(e, subscribe); 
+        handleHoverEnd()
       }
     }
   };
@@ -61,41 +73,37 @@ const CustomForm = ({ setFormVisible, onFormSubmit }) => {
       url={MailChimpURL}
       render={({ subscribe, status, message }) => (
         <div className="form-container">
-          {formSubmitted || status === "success" ? (
-            <div className="successMessage">
-              {status === "success" && !formSubmitted && setFormSubmitted(true)}
-            </div>
-          ) : (
             <form className="subscribeForm" onSubmit={(e) => handleSubmit(e, subscribe)}>
-              <div className="form-box">
+              <div className={`name-div ${formSubmitted ? "fade-out" : ""} ${fadeInName ? 'fade-in' : ''}`}>
                 <input
                   type="text"
                   id="name"
                   value={name}
+                  className={`${formSubmitted ? "submitted" : ""}`} 
                   placeholder="name"
+                  autoComplete="off"
                   onChange={(e) => setName(e.target.value)}
                   onKeyDown={handleNameKeyDown1} 
                   ref={nameInputRef} 
                   // autoFocus
                 />
               </div>
-              {emailInputVisible && (
-                <div>
+                <div className={`email-div ${formSubmitted ? "fade-out" : ""} ${fadeInEmail ? 'fade-in' : ''}`}>
                   <input
                     type="email"
                     id="email"
                     value={email}
+                    className={`${formSubmitted ? "submitted" : ""}`} 
                     placeholder="email"
+                    autoComplete="off"
                     onChange={(e) => setEmail(e.target.value)}
                     onKeyDown={(e) => handleEmailKeyDown(e, subscribe)}
                     required
                     ref={emailInputRef} 
                     autoFocus
                   />
-                </div>
-              )}
+                </div>  
             </form>
-          )}
         </div>
       )}
     />
