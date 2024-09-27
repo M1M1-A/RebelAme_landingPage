@@ -13,6 +13,13 @@
   height: 100vh;
 }
 
+html, body {
+  height: 100%; 
+  margin: 0;
+  overflow: hidden; 
+}
+
+
 p {
   color: #fff7ea;
   opacity: 95%;

@@ -64,7 +64,7 @@
   text-align: center;
   padding: 10px;
   color: #fbfcf4;
-  opacity: 30%;
+  opacity: 40%;
   font-family: 'NueuHaas';
   filter: blur(0.8px); 
 }
@@ -77,29 +77,5 @@ p {
   margin: 0;
 }
 
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-  transition: background-color 5000s;
-  -webkit-text-fill-color: #fff !important;
-} */
 
-
-/* .subscribeForm button {
-  padding: 0.75rem 1rem;
-  background-color: #0b0c0c;
-  border: none;
-  color: #20718B;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%; 
-  margin-top: 1rem;
-  border-radius: 4px;
-  box-sizing: border-box; 
-  opacity: 50%;
-  font-family: 'NueuHaas';
-  filter: blur(0.8px); 
-} */
 
