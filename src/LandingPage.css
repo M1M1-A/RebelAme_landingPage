@@ -50,12 +50,16 @@ body {
   font-size: 1.2rem;
   margin: 3px;
   transition: color 0.04s ease-in-out;
-  filter: blur(0.93px); 
+  filter: blur(0.7px); 
 }
 
 .ig-div a:hover .link-div-text {
   color: #20718B; 
   opacity: 1;
+}
+
+a {
+  text-decoration: none;
 }
 
 .empty-div1 {
