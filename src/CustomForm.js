@@ -44,7 +44,7 @@ const CustomForm = ({ setFormVisible, onFormSubmit, handleHoverEnd }) => {
     }
 
   }, [formSubmitted, setFormVisible, onFormSubmit]);
-
+  
   const handleNameKeyDown1 = (e) => {
     if (e.key === 'Enter') {
       if (name.trim() !== "") {
@@ -73,11 +73,12 @@ const CustomForm = ({ setFormVisible, onFormSubmit, handleHoverEnd }) => {
       url={MailChimpURL}
       render={({ subscribe, status, message }) => (
         <div className="form-container">
-            <form className="subscribeForm" onSubmit={(e) => handleSubmit(e, subscribe)}>
+            <form className="subscribeForm" autocomplete="off" onSubmit={(e) => handleSubmit(e, subscribe)}>
               <div className={`name-div ${formSubmitted ? "fade-out" : ""} ${fadeInName ? 'fade-in' : ''}`}>
                 <input
                   type="text"
                   id="name"
+                  name="random"
                   value={name}
                   className={`${formSubmitted ? "submitted" : ""}`} 
                   placeholder="name"
